@@ -116,5 +116,41 @@
 			},
 			"response": []
 		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "af291e11-0d95-4d6e-8f38-e6f20f856f5b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "d7f573b2-94eb-4f40-9ea0-0356b3c899fd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "ed789e70-865d-4eee-95ac-3078ee6c72e4",
+			"key": "host",
+			"value": "127.0.0.1",
+			"type": "string"
+		},
+		{
+			"id": "350eb92c-294d-4e3b-b502-dda5daca48cd",
+			"key": "port",
+			"value": "8080",
+			"type": "string"
+		}
 	]
 }
