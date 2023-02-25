@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "c20f6b43-8951-4143-8dc1-67f869dc32a8",
+		"name": "http",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "21186016-c20f6b43-8951-4143-8dc1-67f869dc32a8"
+	},
+	"item": [
+		{
+			"name": "上传照片",
+			"id": "20e70fa0-a448-47e1-a27b-3f1d50158ed4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/zouyu/Desktop/READ/20221101174546.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{host}}:{{port}}/api/upload?username=zouyu",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "zouyu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查看照片",
+			"id": "73a745d3-936c-46c2-b924-10c094c75f27",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/image/notfound.png",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"image",
+						"notfound.png"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"id": "191e10ae-b007-4b06-885a-e3a9d6f4c269",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/ping",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "前端",
+			"id": "945a54f2-2e7e-4309-a2c0-4af29ce42dc3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{host}}:{{port}}/home",
+					"protocol": "http",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"home"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
