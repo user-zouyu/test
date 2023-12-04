@@ -19,4 +19,4 @@ jobs:
       - name: "output version"
         run: |
           ls
-          echo ${{input.version}}
+          echo ${{inputs.version}}
