@@ -1,3 +1,5 @@
+name: "call"
+
 on:
   workflow_call:
     inputs:
@@ -14,4 +16,4 @@ jobs:
       - name: "output version"
         run: |
           ls
-          echo ${input.version}
+          echo ${{input.version}}

@@ -1,3 +1,5 @@
+name: "ci"
+
 on:
   push:
     branches:
@@ -10,3 +12,7 @@ jobs:
       - name: echo hello world
         run: |
           echo "hello world"
+      - name: "call action"
+        uses: ./.github/actions/call.yaml
+        with:
+          version: "v1.0.1"
