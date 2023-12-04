@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
     inputs:
-      vaersion:
+      version:
         type: string
         description: "发布版本"
         required: true
