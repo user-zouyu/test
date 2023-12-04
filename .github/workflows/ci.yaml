@@ -16,7 +16,7 @@ jobs:
         run: |
           echo "hello world"
 
-      - name: "call action"
-        uses: ./.github/actions/output-version
+      - name: "workflow_call"
+        uses: ./.github/workflows/workflow_call.yml
         with:
           version: "v1.0.1"
