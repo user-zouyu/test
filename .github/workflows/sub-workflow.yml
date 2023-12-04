@@ -1,0 +1,15 @@
+name: Sub-Workflow
+
+on:
+  workflow_call:
+    inputs:
+      my_param:
+        type: string
+        required: true
+
+jobs:
+  sub-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Input
+        run: echo "My Param is ${{ github.event.inputs.my_param }}"
