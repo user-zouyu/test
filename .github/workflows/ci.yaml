@@ -17,6 +17,6 @@ jobs:
           echo "hello world"
 
       - name: "call action"
-        uses: ./.github/workflows/call.yaml
+        uses: ./.github/workflows/call.yml
         with:
           version: "v1.0.1"
