@@ -1,0 +1,23 @@
+on:
+  workflow_call:
+    inputs:
+      version:
+        type: string
+        default: "v1.0.0"
+  workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        description: "发布版本"
+        default: "v1.0.0"
+
+jobs:
+  out:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: echo
+        run: |
+          echo "hello world"
+      - name: echo version
+        run: |
+          echo ${{inputs.version}}
