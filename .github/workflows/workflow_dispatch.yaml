@@ -1,0 +1,16 @@
+on:
+  workflow_dispatch:
+    inputs:
+      vaersion:
+        type: string
+        description: "发布版本"
+        required: true
+        default: "v1.0.0"
+jobs:
+  output-version:
+    runs-on:
+      - ubuntu-20.04
+    steps:
+      - name: "output version"
+        run: |
+          echo ${inputs.version}
