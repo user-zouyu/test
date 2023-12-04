@@ -17,4 +17,4 @@ jobs:
     steps:
       - name: "output version"
         run: |
-          echo ${{inputs.version}}
+          echo "hello world"
