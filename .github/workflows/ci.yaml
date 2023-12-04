@@ -9,9 +9,13 @@ jobs:
     runs-on:
       - ubuntu-20.04
     steps:
+      - name: "checkout"
+        uses: actions/checkout@v4
+
       - name: echo hello world
         run: |
           echo "hello world"
+
       - name: "call action"
         uses: ./.github/actions/call.yaml
         with:
