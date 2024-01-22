@@ -18,6 +18,6 @@ jobs:
       - name: echo
         run: |
           echo "hello world"
-      - name: echo version
+      - name: echo version.yml
         run: |
           echo ${{inputs.version}}

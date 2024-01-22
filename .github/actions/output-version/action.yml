@@ -10,11 +10,13 @@ on:
         default: "v1.0.0"
 
 
+description:
+runs:
 jobs:
   output:
     runs-on:
       - ubuntu-20.04
     steps:
-      - name: "output version"
+      - name: "output version.yml"
         run: |
           echo "hello world"

@@ -13,6 +13,6 @@ jobs:
     runs-on:
       - ubuntu-20.04
     steps:
-      - name: "output version"
+      - name: "output version.yml"
         run: |
           echo ${{inputs.version}}
