@@ -25,6 +25,5 @@ jobs:
           echo nextStrict: ${{ steps.semver.outputs.nextStrict }}
           echo nextMajor: ${{ steps.semver.outputs.nextMajor }}
           echo nextMajorStrict: ${{ steps.semver.outputs.nextMajorStrict }}
-          echo bump: ${{ steps.semver.outputs.bump }}
           echo nextStrict: ${{ steps.semver.outputs.nextStrict }}
           echo nextMajor: ${{ steps.semver.outputs.nextMajor }}
