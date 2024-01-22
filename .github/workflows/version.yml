@@ -8,17 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get Next Version
-        id: semver
-        uses: ietf-tools/semver-action@v1
+      - name: Get next version
+        uses: reecetech/version-increment@2023.9.3
+        id: version
         with:
-          token: ${{ github.token }}
-          branch: main
+          scheme: semver
+          increment: patch
 
-      - name: Create Release
-#        uses: ncipollo/release-action@v1.12.0
+      - name: Build image
         run: |
-          echo ${{ steps.semver.outputs.next }}
+          echo ${{steps.version.outputs.version}}
