@@ -19,11 +19,6 @@ jobs:
           branch: main
 
       - name: Create Release
+#        uses: ncipollo/release-action@v1.12.0
         run: |
-          echo next: ${{ steps.semver.outputs.next }}
-          echo current: ${{ steps.semver.outputs.current }}
-          echo nextStrict: ${{ steps.semver.outputs.nextStrict }}
-          echo nextMajor: ${{ steps.semver.outputs.nextMajor }}
-          echo nextMajorStrict: ${{ steps.semver.outputs.nextMajorStrict }}
-          echo nextStrict: ${{ steps.semver.outputs.nextStrict }}
-          echo nextMajor: ${{ steps.semver.outputs.nextMajor }}
+          echo ${{ steps.semver.outputs.next }}
