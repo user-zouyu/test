@@ -1,6 +1,9 @@
 name: Deploy
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -11,14 +14,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Get next version
-        uses: reecetech/version-increment@2023.9.3
-        id: version
+      - uses: actions/setup-go@v4
         with:
-          scheme: semver
-          increment: patch
+          go-version: '^1.21.0'
 
-      - name: Build image
+      - name: build
         run: |
-          echo ${{steps.version.outputs.current-version}}
-          echo ${{steps.version.outputs.version}}
+          make release
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
