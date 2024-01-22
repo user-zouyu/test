@@ -35,4 +35,4 @@ jobs:
           allowUpdates: true
           artifacts: "dist/*.tar.gz"
           generateReleaseNotes: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TOKEN }}
